@@ -1,0 +1,66 @@
+<ion-view view-title="Explore">
+  <ion-nav-buttons side="primary">
+    <button class="button button-clear button-icon ion-person-add" ng-click="openPeople()">
+    </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="secondary">
+    <button class="button button-clear button-icon ion-chatboxes" ng-click="openMessage()">
+    </button>
+  </ion-nav-buttons>
+  <ion-content class="bg-grey-200">
+    <div class="wrapper-sm">
+      <button class="button button-light button-block icon-left ion-search b-none m-n" ng-click="openSearch()">Search Vine</button>
+    </div>
+
+    <div class="list list-inset m-t-xs m-b-md">
+      <div class="item b-none r-2x no-padder">
+        <div class="row">
+          <div class="col text-center b-r b-light">
+            <img src="img/icon_star.png" alt="" width="32">
+            <h4>Popular Now</h4>
+          </div>
+          <div class="col text-center">
+            <img src="img/icon_arrow_up.png" alt="" width="32">
+            <h4>On The Rise</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center color-grey-500">Channels</div>
+    <div class="content padding font-bold vine-channels">
+      <div class="button button-block button-large button-positive" ui-sref="home.channel">
+        <img src="img/channel_1.png" alt="" width="36">
+        <span class="channel-title m-l-sm text-md">
+          Spotlight
+        </span>
+      </div>
+      <div class="button button-block button-large button-energized" ui-sref="home.channel">
+        <img src="img/channel_2.png" alt="" width="36">
+        <span class="channel-title m-l-sm text-md">
+          Comedy
+        </span>
+      </div>
+      <div class="button button-block button-large button-calm" ui-sref="home.channel">
+        <img src="img/channel_3.png" alt="" width="36">
+        <span class="channel-title m-l-sm text-md">
+          Weird
+        </span>
+      </div>
+    </div>
+
+    <div class="text-center color-grey-500">Trending Tags</div>
+    <div class="list list-inset m-t-xs m-b-md">
+      <div class="item no-padder" ng-repeat="i in [0,1,2,3]">
+        <div class="row no-padder">
+          <div class="col wrapper text-center b-r b-light">
+            <span class="text-ellipsis">#sing</span>
+          </div>
+          <div class="col wrapper text-center">
+            <span class="text-ellipsis">#onthefly</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

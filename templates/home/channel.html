@@ -1,0 +1,18 @@
+<ion-view view-title="Channel">
+  <ion-nav-bar class="bar-energized b-none">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+  </ion-nav-bar>
+  <ion-nav-buttons side="secondary">
+    <button class="button button-clear button-small button-icon ion-android-add">
+    </button>
+  </ion-nav-buttons>
+  <ion-content class="bg-grey-200">
+    <div class="button-bar bar-light">
+      <a class="button"><span class="balanced">Featured</span></a>
+      <a class="button">Recent</a>
+    </div>
+
+    <ng-include src="'templates/partial/posts.html'">
+  </ion-content>
+</ion-view>

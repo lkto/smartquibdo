@@ -1,0 +1,53 @@
+<ion-view view-title="Categoria">
+ 
+  <ion-content class="vine-feeds">
+    <ion-refresher on-refresh="refresh()" pulling-icon="ion-chevron-up"></ion-refresher>
+     <div class="list" ng-repeat="publi in Det_categoria" ng-click="ver_noti(publi.id)" >
+
+  <div class="item item-avatar avatar-small">
+    <img class="b b-2x b-white" src="img/amanda.jpg">
+    <span class="badge badge-balanced rounded"><i class="icon ion-plus"></i></span>
+    <div class="row no-padder">
+      <div class="col col-67 no-padder">
+        <div class="font-bold text-ellipsis text-sm">{{publi.titulo}}</div>
+       
+      </div>
+      <div class="col no-padder text-right">
+        <div class="count-views text-sm">{{publi.fechar}} </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="item item-body no-padder b-none">
+    <img class="full-image" src="{{publi.imagen}}">
+    <!--
+    <video controls class="video w-full" webkit-playsinline ng-if="$index%2==1">
+      <source src="img/video.mp4" type="video/mp4">
+      <source src="img/video.mp4" type="video/ogg">
+    </video>
+    -->
+    <div class="wrapper-sm">
+      <div class="caption no-padder m-b-sm">
+        {{publi.descripcion}} 
+      </div>
+
+      <div class="seemore text-xs color-grey-500 m-b-sm">
+        {{publi.categoria}} 
+        <i class="icon ion-chevron-right"></i>
+      </div>
+
+      <div class="actions row no-padder row-center color-grey-500">
+        <!--
+        <div class="col no-padder" ui-sref="#">
+          <i class="icon ion-navicon b b-light b-2x rounded"></i>
+          <span class="text-xs">4.0k</span>
+        </div>
+        -->
+      
+      </div>
+    </div>
+  </div>
+</div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,23 @@
+<ion-view hide-nav-bar="true">
+  <ion-content class="bg-black">
+    <div class="hero text-center wrapper m-t-xl">
+      <img class="m-t-xxl m-b-md" src="img/vine_logo.png" alt="" width="200">
+      <p class="text-lg color-grey-500">When videos and <br>personalities get really big</p>
+    </div>
+
+    <div class="cta-buttons m-t-md m-b-md wrapper">
+      <button class="button button-block button-balanced icon-left ion-android-mail" ui-sref="welcome.signup">
+        <b>Sign up with Email</b>
+      </button>
+
+      <button class="button button-block button-calm icon-left ion-social-twitter" ng-click="done()">
+        <b>Login with Twitter</b>
+      </button>  
+    </div>
+    
+
+    <p class="color-grey-500 text-center">
+      Already have an account? <b><a class="color-white no-underline" ui-sref="welcome.login">Log in now!</a></b>
+    </p>
+  </ion-content>
+</ion-view>

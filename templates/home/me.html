@@ -1,0 +1,51 @@
+<ion-view>
+  <ion-nav-title>
+    <div class="l-h-1x">
+      Amanda Cerny
+      <br>
+      <span class="text-xs">@mrhieu</span>
+    </div>
+  </ion-nav-title>
+  <ion-nav-bar class="bar-calm b-none">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+  </ion-nav-bar>
+  <ion-nav-buttons side="primary">
+    <button class="button button-clear button-icon ion-person-add" ng-click="openPeople()">
+    </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="secondary">
+    <button class="button button-clear button-icon ion-chatboxes" ng-click="openMessage()">
+    </button>
+  </ion-nav-buttons>
+  <ion-content class="vine-profile bg-grey-200">
+    <ion-slide-box on-slide-changed="slideHasChanged($index)" class="calm-bg color-white">
+      <ion-slide>
+        <div class="wrapper-lg text-center">
+          <img src="img/amanda.jpg" alt="" class="thumb-lg rounded b b-light b-2x">
+          <p>19 Followers · 20 Followings</p>
+          <div class="text-xs color-grey-400">7 Loops</div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="wrapper-lg text-center">
+          <p>
+            Web developer
+          </p>
+          <p>Vietnam</p>
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+
+    <div class="wrapper-sm">
+      <button class="button button-block button-small button-light icon-left ion-gear-a font-bold b-2x m-n b-light r-2x" ui-sref="home.settings">Settings</button>
+    </div>
+
+    <div class="button-bar bar-light m-b-md">
+      <a class="button"><span class="balanced">5 Posts</span></a>
+      <a class="button">17 Likes</a>
+    </div>
+
+    <ng-include src="'templates/partial/posts.html'">
+  </ion-content>
+</ion-view>

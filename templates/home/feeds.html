@@ -1,0 +1,17 @@
+<ion-view view-title="Vine">
+  <ion-nav-title>
+    <img src="img/vine_logo.png" width="60">
+  </ion-nav-title>
+  <ion-nav-buttons side="primary">
+    <button class="button button-clear button-icon ion-person-add" ng-click="openPeople()">
+    </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="secondary">
+    <button class="button button-clear button-icon ion-chatboxes" ng-click="openMessage()">
+    </button>
+  </ion-nav-buttons>
+  <ion-content class="vine-feeds">
+    <ion-refresher on-refresh="refresh()" pulling-icon="ion-chevron-up"></ion-refresher>
+    <ng-include src="'templates/partial/posts.html'">
+  </ion-content>
+</ion-view>

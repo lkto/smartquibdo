@@ -1,0 +1,43 @@
+<ion-view view-title="Categorias">
+  <ion-nav-buttons side="primary">
+    
+  </ion-nav-buttons>
+  <ion-nav-buttons side="secondary">
+    
+  </ion-nav-buttons>
+  <ion-content class="bg-grey-200">
+  <!--
+    <div class="wrapper-sm">
+      <button class="button button-light button-block icon-left ion-search b-none m-n" ng-click="openSearch()">Search Vine</button>
+    </div>
+
+    <div class="list list-inset m-t-xs m-b-md">
+      <div class="item b-none r-2x no-padder">
+        <div class="row">
+          <div class="col text-center b-r b-light">
+            <img src="img/icon_star.png" alt="" width="32">
+            <h4>Popular Now</h4>
+          </div>
+          <div class="col text-center">
+            <img src="img/icon_arrow_up.png" alt="" width="32">
+            <h4>On The Rise</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+-->
+<br>
+  
+    <div class="content padding font-bold vine-channels">
+
+      <div class="button button-block button-large button-positive" ng-repeat="cat in CategoryPu"  ng-click="Ver_category(cat.id)">
+        <img src="img/channel_1.png" alt="" width="36">
+        <span class="channel-title m-l-sm text-md">
+          {{cat.nombre}}
+        </span>
+      </div>
+    </div>
+
+ 
+  </ion-content>
+</ion-view>

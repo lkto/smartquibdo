@@ -1,0 +1,24 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-positive">
+    <h1 class="title">Messages</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeMessage()"><i class="icon ion-android-close"></i></button>
+    </div>
+  </ion-header-bar>
+  
+  <ion-content class="bg-grey-200">
+    <div class="button-bar bar-light">
+      <a class="button"><span class="positive">Friends</span></a>
+      <a class="button">Other</a>
+    </div>
+
+    <div class="list">
+      <div class="item item-avatar avatar-small" ng-repeat="i in [0,1,2,3,4,5,6]">
+        <img class="b b-2x b-white" src="img/amanda.jpg">
+        <div class="font-bold text-ellipsis text-sm">Amanda Cerny</div>
+        <p class="text-sm">It is a long established fact that a reader will be distracted by the readable content</p>
+        <div class="text-xs color-grey-500">3 days ago</div>
+      </div>
+    </div>
+  </ion-content>
+</ion-modal-view>

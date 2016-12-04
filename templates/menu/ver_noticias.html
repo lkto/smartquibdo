@@ -1,0 +1,44 @@
+<ion-view >
+
+<ion-nav-buttons side="primary">
+
+</ion-nav-buttons>
+
+   <ion-content >
+<div class="list" >
+
+    <h2>{{Det_publicacion.titulo}}</h2>
+
+    <img class="full-image" src="{{Det_publicacion.imagen}}" >
+    <div class="wrapper-sm">
+
+    
+      <div class="caption no-padder m-b-sm">
+        {{Det_publicacion.descripcion}}
+      </div>
+      
+      <div class="actions row no-padder row-center color-grey-500">
+        
+    
+         
+        
+          <button class="button button-clear button-icon ion-plus-circled" ui-sref="menu.AgreComen"> Agregar Comentario
+    </button>
+
+        
+      </div>
+
+
+      <div class="item item-avatar avatar-small b-none" ng-repeat="com in Det_publicacion.comentarios">
+        <img class="b b-2x b-white" src="img/amanda.jpg">
+        <span class="badge badge-balanced rounded"><i class="icon ion-plus"></i></span>
+        
+        <div class="text-xs color-grey-500">{{com.fechar}}</div>
+        <div class="text-sm" style="white-space: normal">{{com.descripcion}}</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</ion-content>
+</ion-view>

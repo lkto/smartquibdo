@@ -1,0 +1,30 @@
+<ion-modal-view>
+  <ion-header-bar class="bar bar-header bar-balanced item-input-inset">
+    <label class="item-input-wrapper">
+      <i class="icon ion-ios-search placeholder-icon"></i>
+      <input type="search" placeholder="Search">
+    </label>
+    <button class="button button-clear button-small" ng-click="closeSearch()">
+      Cancel
+    </button>
+  </ion-header-bar>
+  <ion-content>
+    <div class="list m-n">
+      <div class="item item-divider text-sm">
+        Recent
+      </div>
+      <a class="item text-md" href="#" ng-repeat="i in [0,1,2,3,4,5,6] track by $index">
+        am{{$index}}anda
+      </a>
+    </div>
+
+    <div class="list m-n">
+      <div class="item item-divider text-sm">
+        Suggestions
+      </div>
+      <a class="item text-md" href="#" ng-repeat="i in [0,1,2,3,3,4,5,6,7] track by $index">
+        amanda {{$index}}
+      </a>
+    </div>
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,32 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-positive">
+    <h1 class="title">Find People</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closePeople()"><i class="icon ion-android-close"></i></button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <div class="button-bar bar-light">
+      <a class="button"><img src="img/vine_logo_active.png" width="32" alt=""></a>
+      <a class="button"><i class="icon ion-social-twitter"></i></a>
+      <a class="button"><i class="icon ion-ios-telephone"></i></a>
+    </div>
+
+    <div class="list">
+      <div class="item item-divider text-sm">Suggestions</div>
+      <div class="item item-avatar avatar-small b-none" ng-repeat="i in [0,1,2,3,4,5,6]">
+        <img class="b b-2x b-white" src="img/amanda.jpg">
+        <span class="badge badge-calm rounded"><i class="icon ion-social-twitter"></i></span>
+        <div class="row no-padder">
+          <div class="col col-75 no-padder">
+            <div class="font-bold text-ellipsis text-sm">Amanda Cerny</div>
+            <div class="text-xs color-grey-500">Suggested for you</div>
+          </div>
+          <div class="col no-padder text-right">
+            <i class="icon ion-android-person-add balanced b b-light b-2x r-2x wrapper-xs padder"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,37 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-nav-bar class="bar-balanced">
+  <ion-nav-back-button>
+  </ion-nav-back-button>
+</ion-nav-bar>
+
+<ion-tabs class="tabs-dark tabs-darker tabs-icon-only">
+
+  <!-- Feeds Tab -->
+  <ion-tab icon-off="ion-home" icon-on="ion-home" href="#/home/feeds">
+    <ion-nav-view name="feeds"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Feeds Tab -->
+  <ion-tab icon-off="ion-search" icon-on="ion-search" href="#/home/search">
+    <ion-nav-view name="search"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab class="tab-cta" icon-off="ion-ios-videocam" icon-on="ion-ios-videocam" href="#/home/create">
+    <ion-nav-view name="create"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Feeds Tab -->
+  <ion-tab icon-off="ion-android-notifications" icon-on="ion-android-notifications" href="#/home/activity">
+    <ion-nav-view name="activity"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Feeds Tab -->
+  <ion-tab icon-off="ion-person" icon-on="ion-person" href="#/home/me">
+    <ion-nav-view name="me"></ion-nav-view>
+  </ion-tab>
+
+</ion-tabs>

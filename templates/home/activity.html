@@ -1,0 +1,29 @@
+<ion-view view-title="Activity">
+  <ion-nav-buttons side="primary">
+    <button class="button button-clear button-icon ion-person-add" ng-click="openPeople()">
+    </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="secondary">
+    <button class="button button-clear button-icon ion-chatboxes" ng-click="openMessage()">
+    </button>
+  </ion-nav-buttons>
+  <ion-content class="vine-feeds">
+    <ion-refresher on-refresh="refresh()" pulling-icon="ion-chevron-up"></ion-refresher>
+    <div class="list">
+      <div class="item item-avatar avatar-small b-none" ng-repeat="i in [0,1,2,3,4,5,6]">
+        <img class="b b-2x b-white" src="img/amanda.jpg">
+        <span class="badge badge-calm rounded"><i class="icon ion-social-twitter"></i></span>
+        <div class="row no-padder">
+          <div class="col col-75 no-padder">
+            <div class="font-bold text-ellipsis text-sm">Amanda Cerny</div>
+            <div class="text-xs color-grey-500">@amandacerny</div>
+            <div class="text-sm">Joined Vine <span class="color-grey-500">3/15/15</span></div>
+          </div>
+          <div class="col no-padder text-right">
+            <i class="icon ion-android-person-add balanced b b-light b-2x r-2x wrapper-xs padder"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
