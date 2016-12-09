@@ -4,14 +4,16 @@
 </ion-nav-buttons>
 <ion-content >
 
-<h3>Danos tu opinion es importante</h3>
 
-<div class="list">
-  <label class="item item-input">
-    <textarea name="txtcomentario" id="txtcomentario" cols="30" rows="10"></textarea>
+
+<div class="list" style="width:98%;margin:auto;margin-top:2px">
+  <label class="item item-input" style="border: 1px solid #00bf8e;
+    height: 100px;padding:4px">
+    <textarea name="txtcomentario" id="txtcomentario" cols="30" rows="10" style="height:100px" maxlength="140"></textarea>
   </label>
 
-<button class="button button-positive" ng-click="AgrCom()">
+<button class="button button-positive" ng-click="AgrCom()" style="width:100%;    border-color: #00bf8e;
+    background-color: #00bf8e;">
   Guardar
 </button>
 </div>

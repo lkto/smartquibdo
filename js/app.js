@@ -189,6 +189,7 @@ angular.module('starter', [
 
     .state('menu.categoria', {
       url: '/categoria',
+      cache: false,
       views: {
         'cate': {
           templateUrl: 'templates/menu/categoria.html',
@@ -199,10 +200,33 @@ angular.module('starter', [
 
     .state('menu.ver_categoria', {
       url: '/ver_categoria',
+      cache: false,
       views: {
         'cate': {
           templateUrl: 'templates/menu/ver_categoria.html',
           controller: 'ver_categoriaCrt'
+        }
+      }
+    })
+
+    .state('menu.ver_noti_categ', {
+      url: '/ver_noti_categ',
+      cache: false,
+      views: {
+        'cate': {
+          templateUrl: 'templates/menu/ver_noti_categ.html',
+          controller: 'VerNoticeCtr'
+        }
+      }
+    })
+
+    .state('menu.comen_cat', {
+      url: '/comen_cat',
+      cache: false,
+      views: {
+        'cate': {
+          templateUrl: 'templates/menu/comen_cat.html',
+          controller: 'VerNoticeCtr'
         }
       }
     })

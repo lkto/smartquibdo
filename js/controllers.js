@@ -110,6 +110,38 @@ angular.module('starter.controllers', [])
 
       }
 
+       $scope.AgrCom1=function(){
+
+    var comentario = document.getElementById("txtcomentario").value;
+    console.log(txtcomentario);
+
+
+        var request = $http({
+            method: "post",
+            url: "http://smartquibdo.sigtics.org/services/Publicaciones/Registrar_comentario",
+            data: {
+                    token: token,
+                    id_blog:id,
+                    descripcion: comentario
+                 
+                },
+
+                  headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8' }
+               
+            });
+            request.success(function (data) {
+              console.log(data.dataObj);
+              alertify.logPosition("top right");
+              alertify.success(data.dataObj);
+              document.getElementById("txtcomentario").value ="";
+              $state.go('menu.ver_noti_categ');
+              
+            });
+
+
+
+      }
+
 })
 
 .controller('CategoryCtr', function($scope,$http,$state){
@@ -165,6 +197,18 @@ angular.module('starter.controllers', [])
               console.log(data.dataObj);
               $scope.Det_categoria = data.dataObj;
             });
+
+    $scope.ver_noti1 = function(id){
+
+    console.log(id);
+    localStorage.setItem("id_publi", id);
+
+    $state.go('menu.ver_noti_categ');
+
+
+
+
+   }
 
 
 

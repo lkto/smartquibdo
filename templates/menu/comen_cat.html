@@ -1,0 +1,30 @@
+<ion-view view-title="Comentarios">
+<ion-nav-buttons side="primary">
+
+</ion-nav-buttons>
+<ion-content >
+
+
+
+<div class="list" style="width:98%;margin:auto;margin-top:2px">
+  <label class="item item-input" style="border: 1px solid #00bf8e;
+    height: 100px;padding:4px">
+    <textarea name="txtcomentario" id="txtcomentario" cols="30" rows="10" style="height:100px" maxlength="140"></textarea>
+  </label>
+
+<button class="button button-positive" ng-click="AgrCom1()" style="width:100%;    border-color: #00bf8e;
+    background-color: #00bf8e;">
+  Guardar
+</button>
+</div>
+
+<div class="item item-avatar avatar-small b-none" ng-repeat="com in Det_publicacion.comentarios">
+        <img class="b b-2x b-white" src="img/amanda.jpg">
+        <span class="badge badge-balanced rounded"><i class="icon ion-plus"></i></span>
+        
+        <div class="text-xs color-grey-500">{{com.fechar}}</div>
+        <div class="text-sm" style="white-space: normal">{{com.descripcion}}</div>
+  </div>
+
+</ion-content>
+</ion-view>
