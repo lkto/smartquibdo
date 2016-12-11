@@ -1,72 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <widget xmlns = "http://www.w3.org/ns/widgets"
-    xmlns:gap = "http://phonegap.com/ns/1.0"
-    xmlns:android = "http://schemas.android.com/apk/res/android"
-    id        = "com.ionicframework.vineui776385"
-    versionCode=""
-    version   = "0.0.1">
-    <name>smartquibdo   </name>
+	<widget xmlns = "http://www.w3.org/ns/widgets"
+		xmlns:gap = "http://phonegap.com/ns/1.0"
+		id        = "www.Dk.sigtics.org"
+		versionCode= "2.0"
+		version   = "2.0">
+		<name>smartquibdo   </name>
     <description>Vive al dia con las noticias del chocó   </description>
     <author href="http://sigtics.org/" email="sigtics@gmail.com">Sigtics    </author>
-  <content src="index.html"/>
-  <access origin="*"/>
-  <preference name="webviewbounce" value="false"/>
-  <preference name="UIWebViewBounce" value="false"/>
-  <preference name="DisallowOverscroll" value="true"/>
-  <preference name="android-minSdkVersion" value="16"/>
-  <preference name="BackupWebStorage" value="none"/>
-  <preference name="AllowInlineMediaPlayback" value="true"/>
-  <preference name="MediaPlaybackRequiresUserAction" value="false"/>
-  <preference name="AndroidPersistentFileLocation" value="Compatibility"/>
-  <preference name="phonegap-version" value="3.7.0" />
-    <preference name="android-build-tool" value="gradle" />
-    <preference name="orientation" value="default" />
-    <preference name="fullscreen" value="false" />
-    <preference name="target-device" value="universal" />
-    <preference name="webviewbounce" value="false" />
-    <preference name="prerendered-icon" value="false" />
-    <preference name="stay-in-webview" value="true" />
-    <preference name="ios-statusbarstyle" value="default" />
-    <preference name="detect-data-types" value="true" />
-    <preference name="exit-on-suspend" value="true" />
-    <preference name="show-splash-screen-spinner" value="true" />
-    <preference name="auto-hide-splash-screen" value="true" />
-    <preference name="FadeSplashScreen " value="true" />
-    <preference name="EnableViewportScale" value="false" />
-    <preference name="MediaPlaybackRequiresUserAction" value="false" />
-    <preference name="AllowInlineMediaPlayback" value="true" />
-    <preference name="BackupWebStorage" value="none" />
-    <preference name="TopActivityIndicator" value="white" />
-    <preference name="KeyboardDisplayRequiresUserAction" value="true" />
-    <preference name="KeyboardShrinksView " value="true" />
-    <preference name="HideKeyboardFormAccessoryBar" value="true" />
-    <preference name="SuppressesIncrementalRendering" value="false" />
-    <preference name="windows-identity-name" value="" />
-    <preference name="android-minSdkVersion" value="16" />
-    <preference name="android-installLocation" value="auto" />
-    <preference name="SplashScreenDelay" value="4000" />
-    <preference name="ErrorUrl" value="null" />
-    <preference name="BackgroundColor" value="0x000000" />
-    <preference name="DisallowOverscroll" value="true" />
-  
-    <preference name="LoadUrlTimeoutValue" value="null" />
-  <feature name="StatusBar">
-    <param name="ios-package" value="CDVStatusBar" onload="true"/>
-  </feature>
-  <feature name="http://api.phonegap.com/1.0/battery" />
-    <feature name="http://api.phonegap.com/1.0/camera" />
-    <feature name="http://api.phonegap.com/1.0/contacts" />
-    <feature name="http://api.phonegap.com/1.0/file" />
-    <feature name="http://api.phonegap.com/1.0/geolocation" />
-    <feature name="http://api.phonegap.com/1.0/media" />
-    <feature name="http://api.phonegap.com/1.0/network" />
-    <feature name="http://api.phonegap.com/1.0/notification" />
-    <platform name="android">
-    <splash src="/XAMPP/xamppfiles/htdocs/dekar/img/splas/240_320.png" qualifier="" />
-    <splash src="/XAMPP/xamppfiles/htdocs/dekar/img/splas/720_1280.png" qualifier="" />
-    <splash src="/XAMPP/xamppfiles/htdocs/dekar/img/splas/1600.png" qualifier="" />
-    </platform>
-    <platform name="winphone">
-    </platform>
+		<preference name="phonegap-version" value="3.7.0" />
+		<preference name="orientation" value="default" />
+		<preference name="fullscreen" value="false" />
+		<preference name="target-device" value="universal" />
+		<preference name="webviewbounce" value="true" />
+		<preference name="prerendered-icon" value="true" />
+		<preference name="stay-in-webview" value="true" />
+		<preference name="ios-statusbarstyle" value="default" />
+		<preference name="detect-data-types" value="true" />
+		<preference name="exit-on-suspend" value="false" />
+		<preference name="show-splash-screen-spinner" value="true" />
+		<preference name="auto-hide-splash-screen" value="true" />
+		<preference name="EnableViewportScale" value="true" />
+		<preference name="MediaPlaybackRequiresUserAction" value="false" />
+		<preference name="AllowInlineMediaPlayback" value="false" />
+		<preference name="BackupWebStorage" value="cloud" />
+		<preference name="TopActivityIndicator" value="gray" />
+		<preference name="KeyboardDisplayRequiresUserAction" value="false" />
+		<preference name="HideKeyboardFormAccessoryBar" value="false" />
+		<preference name="SuppressesIncrementalRendering" value="false" />
+		<preference name="android-minSdkVersion" value="13" />
+		<preference name="android-installLocation" value="internalOnly" />
+		<preference name="SplashScreenDelay" value="8000" />
+		<preference name="ErrorUrl" value=""/>
+		<preference name="BackgroundColor" value="0x000000"/>
+		<preference name="KeepRunning" value="true"/>
+		<preference name="DisallowOverscroll" value="false"/>
+		<preference name="LoadUrlTimeoutValue" value="20000" />
+		<preference name="disable-cursor" value="false" />
+		<gap:platform name="android" />
+		<feature name="http://api.phonegap.com/1.0/camera"/>
+		<feature name="http://api.phonegap.com/1.0/contacts"/>
+		<feature name="http://api.phonegap.com/1.0/file"/>
+		<feature name="http://api.phonegap.com/1.0/media"/>
+		<feature name="http://api.phonegap.com/1.0/notification"/>
+		<gap:plugin name="org.apache.cordova.camera"  />
+		<gap:plugin name="org.apache.cordova.contacts"  />
+		<gap:plugin name="org.apache.cordova.device-orientation"  />
+		<gap:plugin name="org.apache.cordova.dialogs"  />
 
-</widget>
+		<gap:plugin name="org.apache.cordova.geolocation"  />
+		<gap:plugin name="org.apache.cordova.globalization"  />
+		<gap:plugin name="org.apache.cordova.inappbrowser"  />
+		<gap:plugin name="org.apache.cordova.media"  />
+		<gap:plugin name="org.apache.cordova.media-capture"  />
+		<gap:plugin name="org.apache.cordova.network-information"  />
+		<gap:plugin name="org.apache.cordova.splashscreen"  />
+		<gap:plugin name="org.apache.cordova.vibration"  />
+
+		<!--<icon src="img/preview.png" gap:platform="android" gap:density="ldpi" />
+		<icon src="img/preview.png" gap:platform="android" gap:density="mdpi" />
+		<icon src="img/preview.png" gap:platform="android" gap:density="hdpi" />
+		<icon src="img/preview.png" gap:platform="android" gap:density="xhdpi" />
+		<icon src="img/preview.png" gap:platform="android" gap:density="xxhdpi" />
+		<icon src="img/preview.png" gap:platform="android" gap:density="xxxhdpi" />
+		<icon src="img/preview.png" /> -->
+		
+		<gap:splash src="img/splas/720_1280.png" gap:platform="android" gap:density="ldpi" />
+		<gap:splash src="img/splas/720_1280.png" gap:platform="android" gap:density="mdpi" />
+		<gap:splash src="img/splas/720_1280.png" gap:platform="android" gap:density="hdpi" />
+		<gap:splash src="img/splas/720_1280.png" gap:platform="android" gap:density="xhdpi" />
+		<gap:splash src="img/splas/720_1280.png" gap:platform="android" gap:density="xxhdpi" />
+		<access origin="*" />
+		<allow-intent href="tel:*" />
+		<allow-intent href="mailto:*" />
+		
+	</widget>
