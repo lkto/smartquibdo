@@ -2,7 +2,7 @@
   <widget xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
     xmlns:android = "http://schemas.android.com/apk/res/android"
-    id        = "com.ionicframework.vineui776385"
+    id        = "com.smartquibdo.sigtics.org"
     versionCode=""
     version   = "0.0.1">
     <name>smartquibdo   </name>
@@ -61,12 +61,7 @@
     <feature name="http://api.phonegap.com/1.0/media" />
     <feature name="http://api.phonegap.com/1.0/network" />
     <feature name="http://api.phonegap.com/1.0/notification" />
-    <platform name="android">
-    <splash src="img/splas/240_320.png" qualifier="" />
-    <splash src="img/splas/720_1280.png" qualifier="" />
-    <splash src="img/splas/1600.png" qualifier="" />
-    </platform>
-    <platform name="winphone">
-    </platform>
+
+  
 
 </widget>
