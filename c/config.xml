@@ -62,9 +62,9 @@
     <feature name="http://api.phonegap.com/1.0/network" />
     <feature name="http://api.phonegap.com/1.0/notification" />
     <platform name="android">
-    <splash src="/XAMPP/xamppfiles/htdocs/dekar/img/splas/240_320.png" qualifier="" />
-    <splash src="/XAMPP/xamppfiles/htdocs/dekar/img/splas/720_1280.png" qualifier="" />
-    <splash src="/XAMPP/xamppfiles/htdocs/dekar/img/splas/1600.png" qualifier="" />
+    <splash src="img/splas/240_320.png" qualifier="" />
+    <splash src="img/splas/720_1280.png" qualifier="" />
+    <splash src="img/splas/1600.png" qualifier="" />
     </platform>
     <platform name="winphone">
     </platform>
