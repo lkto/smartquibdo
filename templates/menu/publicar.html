@@ -3,11 +3,15 @@
     <div class="wrapper">
       <button class="button button-outline button-block button-balanced icon-left ion-videocamera" ng-click="captureVideo()">Take Video</button>
      
-      <button class="button button-outline button-block button-balanced icon-left ion-camera" ng-click="takePhoto()">Take Photo</button> 
+      <button class="button button-outline button-block button-balanced icon-left ion-camera" ng-click="tomaFoto()">Cordova foto</button> 
+
+      <button class="button button-outline button-block button-balanced icon-left ion-camera" ng-click="takePhoto()">Angular foto</button> 
     </div>
 
     <div class="text-center">
       <img ng-src="{{capturedImage}}" ng-if="capturedImage" alt="" width="200">
+
+       <img ng-src={{lastPhoto}} style="max-width: 100%" />
     </div>
   </ion-content>
 </ion-view>

@@ -213,7 +213,7 @@ angular.module('starter.controllers', [])
 
 
 })
-.controller('publicarCrt', function($scope,$cordovaCapture, $cordovaCamera){
+.controller('publicarCrt', function($scope,$cordovaCapture, $cordovaCamera,Camara){
 
   $scope.captureVideo = function() {
     var options = { limit: 3, duration: 15 };
@@ -247,6 +247,19 @@ angular.module('starter.controllers', [])
       alert(err);
     });
   }
+
+  $scope.tomaFoto = function() {
+        Camara.tomaFoto().then(function(imageURI) {
+            $scope.ultimaFoto = imageURI;
+        }, function(err) {
+            console.err(err);
+        }, {
+            quality: 75,
+            targetWidth: 200,
+            targetHeight: 200,
+            saveToPhotoAlbum: false
+        });
+    };
 
 })
 
