@@ -261,6 +261,18 @@ angular.module('starter.controllers', [])
         });
     };
 
+/*
+var imageUpload = new ImageUpload();
+  $scope.file = {};
+  $scope.upload = function() {
+    alert("FUnciona");
+    imageUpload.push($scope.file, function(data){
+      console.log('File uploaded Successfully', $scope.file, data);
+      $scope.uploadUri = data.url;
+      $scope.$digest();
+    });
+  }; */
+
 })
 
 .controller('sujerenciaCrt', function($scope,$http,$state,alertify){

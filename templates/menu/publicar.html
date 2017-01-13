@@ -6,6 +6,11 @@
       <button class="button button-outline button-block button-balanced icon-left ion-camera" ng-click="tomaFoto()">Cordova foto</button> 
 
       <button class="button button-outline button-block button-balanced icon-left ion-camera" ng-click="takePhoto()">Angular foto</button> 
+
+      <h4>Imagen con html file</h4>
+      <input accept="image/*"  type="file" capture/>
+
+
     </div>
 
     <div class="text-center">
@@ -13,5 +18,14 @@
 
        <img ng-src={{lastPhoto}} style="max-width: 100%" />
     </div>
+
+<!--
+<h4>imagen ionic directive</h4>
+<input class="bottom-marg-15" type="file" name="file" file="file">
+  <button class="button button-small button-full button-positive" ng-disabled="file.size&amp;&amp;false || uploadProgress&gt;0" ng-click="upload()" ng-cloak="">Upload</button>
+  <img class="fit" ng-if="uploadUri" ng-src="">
+  <a ng-href="" ng-bind="uploadUri"></a>
+
+-->
   </ion-content>
 </ion-view>
