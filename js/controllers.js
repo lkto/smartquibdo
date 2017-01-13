@@ -243,6 +243,7 @@ angular.module('starter.controllers', [])
 
     $cordovaCamera.getPicture(options).then(function(imageData) {
       $scope.capturedImage = "data:image/jpeg;base64," + imageData;
+      alert(capturedImage);
     }, function(err) {
       alert(err);
     });
@@ -251,6 +252,7 @@ angular.module('starter.controllers', [])
   $scope.tomaFoto = function() {
         Camara.tomaFoto().then(function(imageURI) {
             $scope.ultimaFoto = imageURI;
+            alert(imageURI);
         }, function(err) {
             console.err(err);
         }, {
