@@ -25,7 +25,7 @@
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>
- 
+  <feature name="http://api.phonegap.com/1.0/camera"/>
   <gap:plugin name="cordova-plugin-whitelist" source="npm" />
   <platform name="android">
 
