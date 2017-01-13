@@ -251,7 +251,7 @@ angular.module('starter.controllers', [])
 
   $scope.tomaFoto = function() {
         Camara.tomaFoto().then(function(imageURI) {
-            $scope.ultimaFoto = imageURI;
+            $scope.ultimaFoto = imageURI.filename;
             alert(imageURI);
         }, function(err) {
             console.err(err);
