@@ -244,7 +244,7 @@ angular.module('starter.controllers', [])
 
     $cordovaCamera.getPicture(options).then(function(imageData) {
       $scope.capturedImage = "data:image/jpeg;base64," + imageData;
-      alert(capturedImage);
+      alert(imageData);
     }, function(err) {
       alert(err);
     });
@@ -254,9 +254,14 @@ angular.module('starter.controllers', [])
   $scope.tomaFoto = function() {
         Camara.tomaFoto().then(function(imageURI) {
             //$scope.ultimaFoto = imageURI;
-            document.getElementById("img_cordova").src= imageURI['fielename'];
-            alert(imageURI['fielename']);
-            //alert(imageURI);
+      var largeImage = document.getElementById('img_cordova');
+      largeImage.style.display = 'block';
+      largeImage.src = imageURI;
+      largeImage.src = "data:image/jpeg;base64," + imageURI;
+           // document.getElementById("img_cordova").src= imageURI['fielename'];
+           // alert(imageURI['fielename']);
+            alert(imageURI);
+            alert(largeImage.src);
         }, function(err) {
             console.err(err);
         }, {
