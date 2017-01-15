@@ -234,7 +234,7 @@ angular.module('starter.controllers', [])
       destinationType: Camera.DestinationType.DATA_URL,
      // sourceType: Camera.PictureSourceType.CAMERA,
      // allowEdit: true,
-      encodingType: Camera.EncodingType.JPEG,
+      encodingType: Camera.EncodingType.JPEG
      /* targetWidth: 200,
       targetHeight: 200,
       popoverOptions: CameraPopoverOptions,
@@ -258,10 +258,15 @@ angular.module('starter.controllers', [])
           var datos = JSON.parse(imageURI);
           alert(datos);
             alert(datos['filename']);
-            var datos1 = "data:image/jpeg;base64," + datos['filename'];
-            alert(datos1);
-            document.getElementById("img_cordova").src = datos1;
-            $scope.capturedImage = datos1;
+
+            var img = datos['filename'];
+            var img2 = img.replace("file:///","");
+
+            alert(img2);
+            
+            document.getElementById("img_cordova").src = img;
+            document.getElementById("img_cordova").src = img2;
+            //$scope.capturedImage = datos1;
 
         }, function(err) {
             console.err(err);
