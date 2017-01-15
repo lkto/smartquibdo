@@ -227,22 +227,23 @@ angular.module('starter.controllers', [])
 //Angular
 
   $scope.takePhoto = function() {
-    $scope.capturedImage = ''; 
+    $scope.capturedImage = 'img/adam.jpg'; 
 
     var options = {
-      quality: 50,
+     // quality: 50,
       destinationType: Camera.DestinationType.DATA_URL,
-      sourceType: Camera.PictureSourceType.CAMERA,
-      allowEdit: true,
+     // sourceType: Camera.PictureSourceType.CAMERA,
+     // allowEdit: true,
       encodingType: Camera.EncodingType.JPEG,
-      targetWidth: 200,
+     /* targetWidth: 200,
       targetHeight: 200,
       popoverOptions: CameraPopoverOptions,
-      saveToPhotoAlbum: false,
-      correctOrientation:true
+      saveToPhotoAlbum: true,
+      correctOrientation:true */
     };
 
     $cordovaCamera.getPicture(options).then(function(imageData) {
+
       $scope.capturedImage = "data:image/jpeg;base64," + imageData;
       alert(imageData);
     }, function(err) {
@@ -257,9 +258,10 @@ angular.module('starter.controllers', [])
           var datos = JSON.parse(imageURI);
           alert(datos);
             alert(datos['filename']);
-            alert(datos.filename.file);
-            document.getElementById("img_cordova").src = datos.filename.file;
-            $scope.capturedImage = datos.filename.file;
+            var datos1 = "data:image/jpeg;base64," + datos['filename'];
+            alert(datos1);
+            document.getElementById("img_cordova").src = datos1;
+            $scope.capturedImage = datos1;
 
         }, function(err) {
             console.err(err);
