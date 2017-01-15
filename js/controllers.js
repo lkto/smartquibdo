@@ -225,9 +225,10 @@ angular.module('starter.controllers', [])
     });
   }
 //Angular
+$scope.capturedImage = 'img/adam.jpg'; 
 
   $scope.takePhoto = function() {
-    $scope.capturedImage = 'img/adam.jpg'; 
+    
 
     var options = {
      // quality: 50,
@@ -256,8 +257,10 @@ angular.module('starter.controllers', [])
         Camara.tomaFoto().then(function(imageURI) {
 
           var datos = JSON.parse(imageURI);
+          var datos2 = JSON.parse(datos['filename']);
           alert(datos);
             alert(datos['filename']);
+            alert(datos2.file);
 
             var img = datos['filename'];
             var img2 = img.replace("file:///","");
@@ -265,7 +268,7 @@ angular.module('starter.controllers', [])
             alert(img2);
             
             document.getElementById("img_cordova").src = img;
-            document.getElementById("img_cordova").src = img2;
+            document.getElementById("img_cordova1").src = img2;
             //$scope.capturedImage = datos1;
 
         }, function(err) {
