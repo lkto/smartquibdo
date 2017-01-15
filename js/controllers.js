@@ -253,15 +253,12 @@ angular.module('starter.controllers', [])
 //Cordova
   $scope.tomaFoto = function() {
         Camara.tomaFoto().then(function(imageURI) {
-            //$scope.ultimaFoto = imageURI;
-      var largeImage = document.getElementById('img_cordova');
-      largeImage.style.display = 'block';
-      largeImage.src = imageURI;
-      largeImage.src = "data:image/jpeg;base64," + imageURI;
-           // document.getElementById("img_cordova").src= imageURI['fielename'];
-           // alert(imageURI['fielename']);
+
+           document.getElementById("img_cordova").src= imageURI.filename.file;
+            alert(imageURI.filename);
             alert(imageURI);
-            alert(largeImage.src);
+            alert(imageURI.filename.file);
+
         }, function(err) {
             console.err(err);
         }, {
