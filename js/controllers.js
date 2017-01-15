@@ -257,9 +257,9 @@ angular.module('starter.controllers', [])
           var datos = JSON.parse(imageURI);
           alert(datos);
             alert(datos['filename']);
-            alert(datos);
-            alert(datos['filename']['file']);
-            $scope.capturedImage = datos['filename']['file'];
+            alert(datos.filename.file);
+            document.getElementById("img_cordova").src = datos.filename.file;
+            $scope.capturedImage = datos.filename.file;
 
         }, function(err) {
             console.err(err);
@@ -270,6 +270,9 @@ angular.module('starter.controllers', [])
             saveToPhotoAlbum: true
         });
     };
+
+
+
 
 /*
 var imageUpload = new ImageUpload();
