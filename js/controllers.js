@@ -224,6 +224,7 @@ angular.module('starter.controllers', [])
       // An error occurred. Show a message to the user
     });
   }
+//Angular
 
   $scope.takePhoto = function() {
     $scope.capturedImage = ''; 
@@ -249,10 +250,12 @@ angular.module('starter.controllers', [])
     });
   }
 
+//Cordova
   $scope.tomaFoto = function() {
         Camara.tomaFoto().then(function(imageURI) {
             $scope.ultimaFoto = imageURI;
-            alert($scope.ultimaFoto);
+            document.getElementById("img_cordova").src= "imageURI";
+           // alert($scope.ultimaFoto);
         }, function(err) {
             console.err(err);
         }, {
