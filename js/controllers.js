@@ -255,7 +255,7 @@ angular.module('starter.controllers', [])
         Camara.tomaFoto().then(function(imageURI) {
             //$scope.ultimaFoto = imageURI;
             document.getElementById("img_cordova").src= "imageURI";
-            alert($scope.ultimaFoto);
+            alert(imageURI);
         }, function(err) {
             console.err(err);
         }, {
