@@ -269,6 +269,7 @@ angular.module('starter.controllers', [])
             document.getElementById("img_cordova").src = img;
             document.getElementById("img_cordova1").src = img2;
             //$scope.capturedImage = datos1;
+            $scope.SubirFoto(imageURI);
 
         }, function(err) {
             console.err(err);
@@ -276,14 +277,38 @@ angular.module('starter.controllers', [])
             quality: 75,
             targetWidth: 200,
             targetHeight: 200,
-            saveToPhotoAlbum: true
+            saveToPhotoAlbum: false
         });
     };
 
 
+  $scope.SubirFoto = function uploadFile(mediaFile) {
+
+        var ft = new FileTransfer(),
+            path = mediaFile.fullPath,
+            name = mediaFile.name;
+            alert(name);
+
+        ft.upload(path,
+            "http://smartquibdo.sigtics.org/services/Publicaciones/Registrar_publicacion",
+            function(result) {
+                console.log('Upload success: ' + result.responseCode);
+                console.log(result.bytesSent + ' bytes sent');
+
+                alert('Upload success: ' + result.responseCode);
+                alert(result.bytesSent + ' bytes sent');
+            },
+            function(error) {
+                console.log('Error uploading file ' + path + ': ' + error.code);
+                alert('Error uploading file ' + path + ': ' + error.code);
+            },
+            { fileName: name });
+    }
+
 
 
 /*
+
 var imageUpload = new ImageUpload();
   $scope.file = {};
   $scope.upload = function() {
@@ -293,8 +318,8 @@ var imageUpload = new ImageUpload();
       $scope.uploadUri = data.url;
       $scope.$digest();
     });
-  }; */
-
+  }; 
+*/
 })
 
 .controller('sujerenciaCrt', function($scope,$http,$state,alertify){
