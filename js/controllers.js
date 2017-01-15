@@ -254,11 +254,12 @@ angular.module('starter.controllers', [])
   $scope.tomaFoto = function() {
         Camara.tomaFoto().then(function(imageURI) {
 
-           //document.getElementById("img_cordova").src= imageURI.filename.file;
-            alert(imageURI['filename']);
-            alert(imageURI);
-            alert(imageURI['filename']['file']);
-            $scope.capturedImage = imageURI['filename']['file'];
+          var datos = JSON.parse(imageURI);
+          alert(datos);
+            alert(datos['filename']);
+            alert(datos);
+            alert(datos['filename']['file']);
+            $scope.capturedImage = datos['filename']['file'];
 
         }, function(err) {
             console.err(err);
