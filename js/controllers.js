@@ -225,22 +225,22 @@ angular.module('starter.controllers', [])
     });
   }
 //Angular
-$scope.capturedImage = 'img/adam.jpg'; 
+
 
   $scope.takePhoto = function() {
-    
+    $scope.capturedImage = ''; 
 
     var options = {
-     // quality: 50,
+     quality: 50,
       destinationType: Camera.DestinationType.DATA_URL,
-     // sourceType: Camera.PictureSourceType.CAMERA,
-     // allowEdit: true,
-      encodingType: Camera.EncodingType.JPEG
-     /* targetWidth: 200,
+     sourceType: Camera.PictureSourceType.CAMERA,
+     allowEdit: true,
+      encodingType: Camera.EncodingType.JPEG,
+      targetWidth: 200,
       targetHeight: 200,
       popoverOptions: CameraPopoverOptions,
       saveToPhotoAlbum: true,
-      correctOrientation:true */
+      correctOrientation:true 
     };
 
     $cordovaCamera.getPicture(options).then(function(imageData) {
@@ -257,10 +257,9 @@ $scope.capturedImage = 'img/adam.jpg';
         Camara.tomaFoto().then(function(imageURI) {
 
           var datos = JSON.parse(imageURI);
-          var datos2 = JSON.parse(datos['filename']);
           alert(datos);
             alert(datos['filename']);
-            alert(datos2.file);
+  
 
             var img = datos['filename'];
             var img2 = img.replace("file:///","");
