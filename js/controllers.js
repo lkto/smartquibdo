@@ -251,15 +251,15 @@ angular.module('starter.controllers', [])
 
   $scope.tomaFoto = function() {
         Camara.tomaFoto().then(function(imageURI) {
-            $scope.ultimaFoto = imageURI.filename;
-            alert(imageURI);
+            $scope.ultimaFoto = imageURI;
+            alert($scope.ultimaFoto);
         }, function(err) {
             console.err(err);
         }, {
             quality: 75,
             targetWidth: 200,
             targetHeight: 200,
-            saveToPhotoAlbum: false
+            saveToPhotoAlbum: true
         });
     };
 
