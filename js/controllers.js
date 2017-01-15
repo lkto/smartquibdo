@@ -254,8 +254,9 @@ angular.module('starter.controllers', [])
   $scope.tomaFoto = function() {
         Camara.tomaFoto().then(function(imageURI) {
             //$scope.ultimaFoto = imageURI;
-            document.getElementById("img_cordova").src= "imageURI";
-            alert(imageURI);
+            document.getElementById("img_cordova").src= imageURI['fielename'];
+            alert(imageURI['fielename']);
+            //alert(imageURI);
         }, function(err) {
             console.err(err);
         }, {
