@@ -25,7 +25,7 @@
     <gap:platform name="android" />
     <feature name="http://api.phonegap.com/1.0/camera"/>
     <feature name="http://api.phonegap.com/1.0/file"/>
-    <gap:plugin name="cordova-plugin-camera" source="npm"/>
+    <gap:plugin name="cordova-plugin-camera-all-files" source="npm"/>
 
     
   </widget>
