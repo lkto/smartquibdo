@@ -4,7 +4,7 @@
 
 </ion-nav-buttons>
 
-   <ion-content >
+  <ion-content >
 <div class="list" >
 
     <h2>{{Det_publicacion.titulo}}</h2>
@@ -17,25 +17,49 @@
         {{Det_publicacion.descripcion}}
       </div>
       
-      <div class="actions row no-padder row-center color-grey-500">
-        
-    
-         
-        
-          <button class="button button-clear button-icon ion-plus-circled" ui-sref="menu.comen_cat"> Agregar Comentario
-    </button>
 
-        
-      </div>
 
 
       <div class="item item-avatar avatar-small b-none" ng-repeat="com in Det_publicacion.comentarios">
-        <img class="b b-2x b-white" src="img/amanda.jpg">
-        <span class="badge badge-balanced rounded"><i class="icon ion-plus"></i></span>
+        <img class="b b-2x b-white" src="img/icon.png">
+        <!-- <span class="badge badge-balanced rounded"><i class="icon ion-plus"></i></span> -->
         
         <div class="text-xs color-grey-500">{{com.fechar}}</div>
         <div class="text-sm" style="white-space: normal">{{com.descripcion}}</div>
       </div>
+     
+<br>
+<ion-grid>
+  <ion-row>
+  
+  <ion-col width-90>
+  <label class="item item-input" style="border: 1px solid #00bf8e;
+height: 50px;
+padding: 0px !Important;
+width: 99.1%;">
+    <textarea name="txtcomentario" id="txtcomentario" cols="30" rows="10" style="height:50px" maxlength="140" placeholder="Comentario..."></textarea>
+  </label>
+</ion-col>
+
+    <ion-col width-10>
+  <button class="button button-positive" ng-click="AgrCom1()" style="width: 99.2%;
+border-color: #00bf8e;
+background-color: #00bf8e;
+padding: 0px;
+margin: 0px;
+margin-left: -1px;">
+  Enviar
+</button>
+</ion-col>
+  </ion-row>
+</ion-grid>
+
+
+
+     <!--  <div class="actions row no-padder row-center color-grey-500" style="Border:none">        
+    <button class="button button-clear button-icon ion-plus-circled" ui-sref="menu.AgreComen"> Agregar comentario
+    </button>        
+      </div>  -->
 
     </div>
   </div>

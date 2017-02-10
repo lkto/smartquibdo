@@ -102,7 +102,7 @@ angular.module('starter.controllers', [])
               alertify.logPosition("top right");
               alertify.success(data.dataObj);
               document.getElementById("txtcomentario").value ="";
-              $state.go('menu.ver_noticias');
+              $scope.cargarNotice();
               
             });
 
@@ -134,7 +134,7 @@ angular.module('starter.controllers', [])
               alertify.logPosition("top right");
               alertify.success(data.dataObj);
               document.getElementById("txtcomentario").value ="";
-              $state.go('menu.ver_noti_categ');
+              $scope.cargarNotice();
               
             });
 
@@ -224,6 +224,45 @@ angular.module('starter.controllers', [])
       // An error occurred. Show a message to the user
     });
   }
+$scope.fotoT = function (){
+navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+   destinationType: Camera.DestinationType.FILE_URI });
+
+}
+
+function onSuccess(imageURI) {
+    var image = document.getElementById('fotoLocal');
+    image.src = imageURI;
+}
+        
+function onFail(message) {
+    alert('Failed because: ' + message);
+}
+
+ $scope.subir = function () {
+    var options = new FileUploadOptions();
+    options.fileKey = "imagen";
+    options.fileName = fileURL.substr(fileURL.lastIndexOf('/') + 1);
+
+    var ft = new FileTransfer();
+    ft.upload(fileURL, encodeURI("http://smartquibdo.sigtics.org/services/Publicaciones/Registrar_publicacion"), uploadSuccess, uploadFail, options);
+
+
+ }
+
+ function uploadSuccess(r) {
+    alert("Code = " + r.responseCode+" Response = " + r.response+" Sent = " + r.bytesSent);
+}
+
+function uploadFail(error) {
+    alert("An error has occurred: Code = " + error.code+ " upload error source " + error.source+" upload error target " + error.target);
+
+}
+
+         
+   
+
+
 //Angular
 
 

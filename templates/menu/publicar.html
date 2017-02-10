@@ -1,24 +1,56 @@
 <ion-view view-title="Publicar">
   <ion-content>
     <div class="wrapper">
-      <button class="button button-outline button-block button-balanced icon-left ion-videocamera" ng-click="captureVideo()">Take Video</button>
+    
      
-      <button class="button button-outline button-block button-balanced icon-left ion-camera" ng-click="tomaFoto()">Cordova foto</button> 
+      <button class="button button-outline button-block button-balanced icon-left ion-camera" ng-click="tomaFoto()">Tomar Foto</button> 
 
+      <button class="button button-outline button-block button-balanced icon-left ion-camera" ng-click=" fotoT()">Tomar Foto2</button> 
+<!--
       <button class="button button-outline button-block button-balanced icon-left ion-camera" ng-click="takePhoto()">Angular foto</button> 
 
-      <h4>Imagen con html file</h4>
-      <input accept="image/*"  type="file" capture/>
-
+       <button class="button button-outline button-block button-balanced icon-left ion-videocamera" ng-click="captureVideo()">Take Video</button> -->
 
     </div>
+
+    <div class="list">
+        <label class="item item-input" style="border: 1px solid #00bf8e;
+height: 50px;
+padding: 0px !Important;
+width: 99.1%;">
+          <input type="text" placeholder="Titulo">
+        </label>
+
+  <label class="item item-input" style="border: 1px solid #00bf8e;
+height: 250px;
+padding: 0px !Important;
+width: 99.1%;">
+    <textarea name="txtcomentario" id="txtcomentario" cols="30" rows="10" style="height:250px" maxlength="140" placeholder="Comentario..."></textarea>
+  </label>
+
+        
+  </div>
 
     <div class="text-center">
       <img ng-src="{{capturedImage}}" ng-if="capturedImage" alt="" width="200">
-
        <img  style="max-width: 100%"  id="img_cordova" />
        <img  style="max-width: 100%"  id="img_cordova1" />
+
+       <h1>Local</h1>
+       <img id="fotoLocal" src="" width="100px" height="100px">
+
+       <h1>Servidor</h1>
+       <img id="fotoServidor" src="" width="100px" height="100px">
     </div>
+
+<button class="button button-positive" ng-click="subir()"  style="width: 99.2%;
+border-color: #00bf8e;
+background-color: #00bf8e;
+padding: 0px;
+margin: 0px;
+margin-left: -1px;">
+  Enviar
+</button>
 
 <!--
 <h4>imagen ionic directive</h4>

@@ -1,8 +1,19 @@
-<ion-view view-title="Contactanos">
+<ion-view view-title="Comentar">
 <ion-nav-buttons side="primary">
 
 </ion-nav-buttons>
 <ion-content >
+
+
+
+
+<div class="item item-avatar avatar-small b-none" ng-repeat="com in Det_publicacion.comentarios">
+        <img class="b b-2x b-white" src="img/amanda.jpg">
+        <span class="badge badge-balanced rounded"><i class="icon ion-plus"></i></span>
+        
+        <div class="text-xs color-grey-500">{{com.fechar}}</div>
+        <div class="text-sm" style="white-space: normal">{{com.descripcion}}</div>
+  </div>
 
 
 
@@ -18,13 +29,6 @@
 </button>
 </div>
 
-<div class="item item-avatar avatar-small b-none" ng-repeat="com in Det_publicacion.comentarios">
-        <img class="b b-2x b-white" src="img/amanda.jpg">
-        <span class="badge badge-balanced rounded"><i class="icon ion-plus"></i></span>
-        
-        <div class="text-xs color-grey-500">{{com.fechar}}</div>
-        <div class="text-sm" style="white-space: normal">{{com.descripcion}}</div>
-  </div>
 
 </ion-content>
 </ion-view>

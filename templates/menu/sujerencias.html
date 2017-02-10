@@ -1,4 +1,4 @@
-<ion-view view-title="Sujerencias">
+<ion-view view-title="Sugerencias">
 <ion-nav-buttons side="primary">
 
 </ion-nav-buttons>
@@ -7,15 +7,26 @@
 <h3>Danos tu opinion es importante</h3>
 
 <div class="list">
- <label class="item item-input">
-    <input type="text" name="titulo" id="titulo" placeholder="Titulo">
-  </label>
-  <label class="item item-input">
-    <textarea name="txtcomentario" id="txtcomentario" cols="30" rows="10"></textarea>
+         <label class="item item-input" style="border: 1px solid #00bf8e;
+height: 50px;
+padding: 0px !Important;
+width: 99.1%;">
+          <input type="text" placeholder="Titulo">
+        </label>
+  <label class="item item-input" style="border: 1px solid #00bf8e;
+height: 250px;
+padding: 0px !Important;
+width: 99.1%;">
+    <textarea name="txtcomentario" id="txtcomentario" cols="30" rows="10" style="height:250px" maxlength="140" placeholder="Comentario..."></textarea>
   </label>
 
-<button class="button button-positive" ng-click="AgrSuj()">
-  Guardar
+<button class="button button-positive"  style="width: 99.2%;
+border-color: #00bf8e;
+background-color: #00bf8e;
+padding: 0px;
+margin: 0px;
+margin-left: -1px;">
+  Enviar
 </button>
 </div>
 
